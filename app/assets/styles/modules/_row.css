@@ -1,15 +1,25 @@
 .row{
     @mixin clearfix{};
-    &--gutters{
-        margin-right: -65px;
-    }
-
-    & > div{
+    
+    div{
         float: left;
     }
 
-    &--gutters > div{
-        padding-right: 65px;
+    @mixin atSmall {
+        &--gutters{
+            padding-right: -65px;
+        }
+    
+        &--gutters-large{
+            padding-right: -100px;
+        }
+        &--gutters > div{
+            padding-right: 65px;
+        }
+    
+        &--gutters-large > div{
+            padding-right: 100px;
+        }
     }
 
     @mixin atMedium {
@@ -27,6 +37,10 @@
 
         &__two-thirds-smaller{
             width: 63%;
+        }
+
+        &__half{
+            width: 50%;
         }
     }
 }
