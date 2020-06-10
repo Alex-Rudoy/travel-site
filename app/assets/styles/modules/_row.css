@@ -5,10 +5,6 @@
         float: left;
     }
 
-    & > div:last-child{
-        margin-bottom: 0px;
-    }
-
     @mixin atMedium {
         &__one-third{
             width: 33.33%;
