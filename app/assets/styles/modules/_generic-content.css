@@ -1,14 +1,14 @@
-.generic-content__p{
-    line-height: 1.65;
-    margin: 0 0 1.8rem 0;
-    font-weight: 300;
+.generic-content__p {
+  line-height: 1.65;
+  margin: 0 0 1.8rem 0;
+  font-weight: 300;
 
-    @mixin atSmall {
-        font-size: 1.125rem;
-    }
+  @mixin atSmall {
+    font-size: 1.125rem;
+  }
 }
 
-.generic-content__a{
-    color: $mainOrange;
-    font-weight: 700;
+.generic-content__a {
+  color: $mainOrange;
+  font-weight: 700;
 }

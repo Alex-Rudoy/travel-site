@@ -1,46 +1,47 @@
-.row{
-    @mixin clearfix{};
-    
-    & > div{
-        float: left;
+.row {
+  @mixin clearfix {
+  }
+
+  & > div {
+    float: left;
+  }
+
+  @mixin atMedium {
+    &__one-third {
+      width: 33.33%;
     }
 
-    @mixin atMedium {
-        &__one-third{
-            width: 33.33%;
-        }
-        
-        &__one-third-larger{
-            width: 37%;
-        }
-
-        &__two-thirds{
-            width: 66.66%;
-        }
-
-        &__two-thirds-smaller{
-            width: 63%;
-        }
-
-        &__half{
-            width: 50%;
-        }
-
-        &--gutters > div{
-            padding-right: 65px;
-        }
-    
-        &--gutters-large > div{
-            padding-right: 100px;
-        }
-
-        &--equal-height{
-            display: flex;
-
-            & > div{
-                display: flex;
-                float: none;
-            }
-        }
+    &__one-third-larger {
+      width: 37%;
     }
+
+    &__two-thirds {
+      width: 66.66%;
+    }
+
+    &__two-thirds-smaller {
+      width: 63%;
+    }
+
+    &__half {
+      width: 50%;
+    }
+
+    &--gutters > div {
+      padding-right: 65px;
+    }
+
+    &--gutters-large > div {
+      padding-right: 100px;
+    }
+
+    &--equal-height {
+      display: flex;
+
+      & > div {
+        display: flex;
+        float: none;
+      }
+    }
+  }
 }
