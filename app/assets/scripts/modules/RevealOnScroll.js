@@ -40,7 +40,6 @@ class RevealOnScroll {
 
   resizeTracker() {
     this.browserHeight = window.innerHeight;
-    console.log(this.browserHeight);
   }
 }
 
