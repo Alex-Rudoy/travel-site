@@ -32,7 +32,10 @@
     left: 50%;
     transform: translateX(-50%);
     transform-origin: 50% 0;
-    transition: 0.3s ease-out;
+
+    &--loaded {
+      transition: 0.3s ease-out;
+    }
 
     @mixin atMedium {
       left: auto;
