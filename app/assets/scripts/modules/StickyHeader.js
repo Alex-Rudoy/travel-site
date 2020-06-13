@@ -14,8 +14,8 @@ class StickyHeader {
   }
 
   events() {
-    window.addEventListener("scroll", this.scrollThrottle).bind(this);
-    window.addEventListener("resize", this.resizeDebounce).bind(this);
+    window.addEventListener("scroll", this.scrollThrottle);
+    window.addEventListener("resize", this.resizeDebounce);
   }
 
   runOnScroll() {

@@ -24,7 +24,7 @@
         </div>
         <div class="site-header__menu-content">
           <div class="site-header__btn-container">
-            <a href="#" class="btn">Get in Touch</a>
+            <a href="#" class="btn open-modal">Get in Touch</a>
           </div>
           <nav class="header-menu header-menu--right">
             <ul>
@@ -55,7 +55,7 @@
             We create soul restoring journeys that inspire you to be you.
           </p>
           <p>
-            <a href="#" class="btn btn--orange btn--large">Get Started Today</a>
+            <a href="#" class="btn btn--orange btn--large open-modal">Get Started Today</a>
           </p>
         </div>
       </div>
@@ -74,20 +74,21 @@
         </h3>
         <div class="wrapper wrapper--medium wrapper--b-margin">
           <img
-            srcset="
+            data-srcset="
               assets/images/first-trip-low-res.jpg  565w,
               assets/images/first-trip.jpg          976w,
               assets/images/first-trip-hi-dpi.jpg  1952w
             "
             alt="Couple walking down a street."
+            class="lazyload"
           />
         </div>
         <div class="row row--gutters">
           <div class="row__one-third-larger">
             <picture>
-              <source media="(min-width: 1020px)" srcset="assets/images/our-start.jpg" />
-              <source media="(min-width: 800px)" srcset="assets/images/our-start-portrait.jpg" />
-              <img src="assets/images/our-start-landscape.jpg" alt="Our founder, Jane Doe" />
+              <source media="(min-width: 1020px)" data-srcset="assets/images/our-start.jpg" />
+              <source media="(min-width: 800px)" data-srcset="assets/images/our-start-portrait.jpg" />
+              <img data-src="assets/images/our-start-landscape.jpg" alt="Our founder, Jane Doe" class="lazyload" />
             </picture>
           </div>
           <div class="row__two-thirds-smaller">
@@ -187,7 +188,7 @@
           <div class="row__one-third">
             <div class="testimonial testimonial--hidden">
               <div class="testimonial__photo">
-                <img src="assets/images/testimonial-jane.jpg" />
+                <img data-src="assets/images/testimonial-jane.jpg" class="lazyload" />
               </div>
               <h3 class="testimonial__title">Jane Doe</h3>
               <h4 class="testimonial__subtitle">9 Time Escaper</h4>
@@ -203,7 +204,7 @@
           <div class="row__one-third">
             <div class="testimonial testimonial--hidden">
               <div class="testimonial__photo">
-                <img src="assets/images/testimonial-john.jpg" />
+                <img data-src="assets/images/testimonial-john.jpg" class="lazyload" />
               </div>
               <h3 class="testimonial__title">John Smith</h3>
               <h4 class="testimonial__subtitle">4 Time Escaper</h4>
@@ -218,7 +219,7 @@
           <div class="row__one-third">
             <div class="testimonial testimonial--hidden">
               <div class="testimonial__photo">
-                <img src="assets/images/testimonial-cat.jpg" />
+                <img data-src="assets/images/testimonial-cat.jpg" class="lazyload" />
               </div>
               <h3 class="testimonial__title">Cat McKitty</h3>
               <h4 class="testimonial__subtitle">6 Time Escaper</h4>
@@ -238,29 +239,11 @@
       <div class="wrapper">
         <p>
           <span class="site-footer__text">Copyright &copy; 2019 Clear View Escapes. All rights reserved. </span
-          ><a href="#" class="btn btn--orange">Get in Touch</a>
+          ><a href="#" class="btn btn--orange open-modal">Get in Touch</a>
         </p>
       </div>
     </footer>
-    <!-- Leave this commented out HTML here until you need it for an upcoming "modal" lesson
-  <div class="modal">
-    <div class="modal__inner">
-      <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon">
-         Get in <strong>Touch</strong></h2>
-      <div class="wrapper wrapper--narrow">
-        <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>
-      </div>
 
-      <div class="social-icons">
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/twitter.svg" alt="Twitter"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/instagram.svg" alt="Instagram"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/youtube.svg" alt="YouTube"></a>
-      </div>
-    </div>
-    <div class="modal__close">X</div>
-  </div>
-  This is the end of the "modal" reference HTML -->
     <script src="bundled.js"></script>
   </body>
 </html>

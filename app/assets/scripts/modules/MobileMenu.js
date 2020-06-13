@@ -3,6 +3,7 @@ class MobileMenu {
     this.menuIcon = document.querySelector(".site-header__menu-icon");
     this.menuContent = document.querySelector(".site-header__menu-content");
     this.siteHeader = document.querySelector(".site-header");
+    this.logo = document.querySelector(".site-header__logo");
     this.events();
   }
 
@@ -13,6 +14,7 @@ class MobileMenu {
 
   preventFlash() {
     this.menuContent.classList.add("site-header__menu-content--loaded");
+    this.logo.classList.add("site-header__logo--loaded");
   }
 
   toggleMenu() {
