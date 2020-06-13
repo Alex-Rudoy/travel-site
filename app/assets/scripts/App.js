@@ -5,7 +5,7 @@ import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
 import { set } from "lodash";
-//1
+
 let mobileMenu = new MobileMenu();
 let revealOnScroll = new RevealOnScroll();
 let stickyHeader = new StickyHeader();
