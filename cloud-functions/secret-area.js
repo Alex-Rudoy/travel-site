@@ -6,6 +6,16 @@ exports.handler = function (event, context, callback) {
   <p>Here we can tell you that the sky is <strong>blue</strong> and 2+2=<strong>4</strong></p>
   `;
 
+  if (event.httpMethod !== POST) {
+    return callback(null, {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    });
+  }
+
   if (event.body) {
     body = JSON.parse(event.body);
   } else {
@@ -16,18 +26,10 @@ exports.handler = function (event, context, callback) {
     callback(null, {
       statusCode: 200,
       body: secretContent,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
     });
   } else {
     callback(null, {
       statusCode: 401,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
     });
   }
 };
