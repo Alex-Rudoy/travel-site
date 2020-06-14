@@ -16,6 +16,9 @@ exports.handler = function (event, context, callback) {
     callback(null, {
       statusCode: 200,
       body: secretContent,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
     });
   } else {
     callback(null, {

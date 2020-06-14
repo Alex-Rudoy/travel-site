@@ -4,11 +4,13 @@ import "lazysizes";
 import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
+import ClientArea from "./modules/ClientArea";
 import { set } from "lodash";
 
 let mobileMenu = new MobileMenu();
 let revealOnScroll = new RevealOnScroll();
 let stickyHeader = new StickyHeader();
+let clientArea = new ClientArea();
 
 //modal handler
 let modal;
