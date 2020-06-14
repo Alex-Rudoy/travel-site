@@ -1,20 +1,23 @@
 exports.handler = function (event, context, callback) {
-  let body;
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
 
-  const secretContent = `
-  <h3>Welcome to the Secret Area</h3>
-  <p>Here we can tell you that the sky is <strong>blue</strong> and 2+2=<strong>4</strong></p>
-  `;
-
-  if (event.httpMethod !== POST) {
+  if (event.httpMethod !== "POST") {
     return callback(null, {
       statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
+      headers,
+      body: "This was not a POST request",
     });
   }
+
+  const secretContent = `
+  <h3>Welcome To The Secret Area</h3>
+  <p>Here we can tell you that the sky is <strong>blue</strong>, and two plus two equals four.</p>
+  `;
+
+  let body;
 
   if (event.body) {
     body = JSON.parse(event.body);
@@ -25,11 +28,13 @@ exports.handler = function (event, context, callback) {
   if (body.password == "javascript") {
     callback(null, {
       statusCode: 200,
+      headers,
       body: secretContent,
     });
   } else {
     callback(null, {
       statusCode: 401,
+      headers,
     });
   }
 };
