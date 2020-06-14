@@ -18,11 +18,16 @@ exports.handler = function (event, context, callback) {
       body: secretContent,
       headers: {
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
       },
     });
   } else {
     callback(null, {
       statusCode: 401,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
     });
   }
 };
