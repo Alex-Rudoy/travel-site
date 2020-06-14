@@ -23,11 +23,14 @@ exports.handler = function (event, context, callback) {
     });
   } else {
     callback(null, {
-      statusCode: 401,
+      statusCode: 201,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Content-Type",
       },
+      body: `
+      <p class="client-area__error">That secret phrase is not corrent. Try again</p>
+      `,
     });
   }
 };
