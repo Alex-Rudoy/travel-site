@@ -39,9 +39,6 @@ class ClientArea {
     axios
       .post("https://confident-torvalds-5e842d.netlify.app/.netlify/functions/secret-area", {
         password: this.field.value,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-        },
       })
       .then((response) => {
         this.form.remove();
