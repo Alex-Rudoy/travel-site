@@ -25,6 +25,7 @@ exports.handler = function (event, context, callback) {
       statusCode: 401,
       headers: {
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST , GET, DELETE, PUT , OPTIONS",
       },
     });
   }
