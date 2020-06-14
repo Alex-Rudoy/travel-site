@@ -26,13 +26,11 @@ exports.handler = function (event, context, callback) {
   if (body.password == "javascript") {
     callback(null, {
       statusCode: 200,
-      headers,
       body: secretContent,
     });
   } else {
     callback(null, {
       statusCode: 401,
-      headers,
     });
   }
 };
