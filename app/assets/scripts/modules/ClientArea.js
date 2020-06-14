@@ -46,7 +46,7 @@ class ClientArea {
       })
       .catch(() => {
         this.contentArea.innerHTML = `
-      <p class="client-area__error>That secret phrase is not corrent. Try again</p>
+      <p class="client-area__error">That secret phrase is not corrent. Try again</p>
       `;
         this.field.value = "";
         this.field.focus();
