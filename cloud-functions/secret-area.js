@@ -23,12 +23,6 @@ exports.handler = function (event, context, callback) {
   } else {
     callback(null, {
       statusCode: 401,
-      headers: {
-        "Access-Control-Allow-Origin": "http://localhost:3000",
-        "Access-Control-Allow-Methods": "POST , GET, DELETE, PUT , OPTIONS",
-        "Access-Control-Allow-Headers": "content-type",
-        "Access-Control-Allow-Credentials": true,
-      },
     });
   }
 };
