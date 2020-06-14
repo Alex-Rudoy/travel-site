@@ -26,7 +26,8 @@ exports.handler = function (event, context, callback) {
       headers: {
         "Access-Control-Allow-Origin": "http://localhost:3000",
         "Access-Control-Allow-Methods": "POST , GET, DELETE, PUT , OPTIONS",
-        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Headers": "content-type",
+        "Access-Control-Allow-Credentials": true,
       },
     });
   }
