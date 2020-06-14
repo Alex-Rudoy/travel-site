@@ -5,7 +5,7 @@ class ClientArea {
     this.injectHTML();
     this.form = document.querySelector(".client-area__form");
     this.field = document.querySelector(".client-area__input");
-    this.contentArea = document.querySelector(".client-aread__content-area");
+    this.contentArea = document.querySelector(".client-area__content-area");
 
     this.events();
   }
@@ -39,6 +39,9 @@ class ClientArea {
     axios
       .post("https://confident-torvalds-5e842d.netlify.app/.netlify/functions/secret-area", {
         password: this.field.value,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
       })
       .then((response) => {
         this.form.remove();
