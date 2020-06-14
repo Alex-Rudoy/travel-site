@@ -41,7 +41,9 @@ class ClientArea {
         password: this.field.value,
       })
       .then((response) => {
-        this.form.remove();
+        if (response.status == 200) {
+          this.form.remove();
+        }
         this.contentArea.innerHTML = response.data;
       })
       .catch(() => {
