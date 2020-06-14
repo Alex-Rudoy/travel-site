@@ -27,6 +27,7 @@ exports.handler = function (event, context, callback) {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST , GET, DELETE, PUT , OPTIONS",
         "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Credentials": true,
       },
     });
   }
