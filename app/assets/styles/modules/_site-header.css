@@ -10,6 +10,8 @@
 
   @mixin atMedium {
     background-color: rgba(47, 85, 114, 0.55);
+    height: auto;
+    overflow: visible;
 
     &--dark {
       background-color: rgba(23, 51, 72, 0.85);
