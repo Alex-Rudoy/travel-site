@@ -3,12 +3,18 @@ class MobileMenu {
     this.menuIcon = document.querySelector(".site-header__menu-icon");
     this.menuContent = document.querySelector(".site-header__menu-content");
     this.siteHeader = document.querySelector(".site-header");
+    this.navLink1 = document.querySelector("#our-beginning-link");
+    this.navLink2 = document.querySelector("#features-link");
+    this.navLink3 = document.querySelector("#testimonials-link");
     this.logo = document.querySelector(".site-header__logo");
     this.events();
   }
 
   events() {
     this.menuIcon.addEventListener("click", () => this.toggleMenu());
+    this.navLink1.addEventListener("click", () => this.toggleMenu());
+    this.navLink2.addEventListener("click", () => this.toggleMenu());
+    this.navLink3.addEventListener("click", () => this.toggleMenu());
     document.addEventListener("DOMContentLoaded", this.preventFlash.bind(this));
   }
 
